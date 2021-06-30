@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher order functions</title>
+</head>
+<body>
+    <p>Higher Order functions</p>
+<button onclick="prog1()">Prog1</button>
+<button onclick="Prog2()">Prog2</button>
+<button onclick="iseven()">Prog3</button>
+<button onclick="isPrime()">Prog3</button>
+<button onclick="notPrime">Prog4</button>
+<button onclick="isEven()">Prog5</button>
+<button onclick="indSquareOfNumbers()">Prog6</button>
+<button onclick="Prog7()">Prog7</button>
+
+<p id="disp"></p>
+<script>
+    //progression 1
+
+      function prog1(){
+
+        let foods = ["pizza"," burger", "fingerShips", "donuts", "springRoll"];
+        let i=1 , n=foods.length;
+        var modifiedFood= foods.slice(i,n-1)
+        document.getElementById("disp").innerHTML=modifiedFood
+
+      }
+
+
+      //progression 2
+      /*Expected output: [pizza, burger, noodles, icecream, fingerShips, donuts, springRoll];*/
+
+      function Prog2(){
+
+        let foods = ["pizza"," burger", "fingerShips", "donuts", "springRoll"];
+        foods.splice(2, 0, "noodles", "icecream");
+        document.getElementById("disp").innerHTML = foods;
+
+      }
+
+      //progression 3
+      var numberArray = [12,324,213,4,2,3,45,4234];
+    
+function iseven() {
+    var result = numberArray.filter(num => num%2 ==0);
+  document.getElementById("disp").innerHTML = result
+      }
+
+      function isPrime()
+{
+let primes=numberArray.filter(function(number)
+    { 
+     for (var i=2;i<number;i++)
+      {
+        return number%i!=0;
+      }
+ });
+ document.getElementById("disp").innerHTML = primes ;
+}
+
+//progression4
+
+      function notPrime()
+{
+    
+ var numberArray = [12,324,213,4,2,3,45,4234];
+let primes=numberArray.filter(function(number)
+    { 
+      for (var i=2;i<number;i++)
+       {
+          return number%i!=0;
+      }
+ });
+ 
+   numberArray = numberArray.filter(val => !primes.includes(val));
+   console.log(numberArray)
+   document.getElementById("disp").innerHTML = numberArray ;
+
+}
+
+//progression 5
+function isEven()
+{
+  var numberArray = [12,324,213,4,2,3,45,4234];
+  console.log(materials.filter(numberArray => numberArray%2==0));
+}
+
+//progression6
+function findSquareOfNumbers()
+{
+  let myArray = [11, 34, 20, 5, 53, 16];
+  var sqary=myArray.map((item)=>item*item)
+  console.log(sqary)
+  document.getElementById("disp").innerHTML =sqary
+
+}
+
+//progression7
+function multiply(){
+let myArray=[2, 3, 5, 10]
+var mul=1
+for(let i=0;i<myArray.length;i++)
+ {
+     mul=mul*myArray[i]
+ }
+     console.log(mul)
+    }
+
+
+</script>
+  
+</body>
+</html>
